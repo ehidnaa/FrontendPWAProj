@@ -9,3 +9,11 @@
   <p>Hello, {{ name }}!</p>
   <ion-button routerLink="/about">Go to About Page</ion-button>
 </ion-content>
+
+<ion-button (click)="loadTasks()">Load tasks</ion-button>
+
+<ion-list>
+  <ion-item *ngFor="let task of tasks">
+    {{ task.title }}
+  </ion-item>
+</ion-list>

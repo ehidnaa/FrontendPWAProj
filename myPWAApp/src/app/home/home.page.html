@@ -12,6 +12,12 @@
 
 <ion-button (click)="loadTasks()">Load tasks</ion-button>
 
+<ion-button (click)="getDeviceInfo()">Get device info</ion-button>
+
+<pre *ngIf="deviceInfo && deviceInfo.platform">
+  {{ deviceInfo | json }}
+</pre>
+
 <ion-list>
   <ion-item *ngFor="let task of tasks">
     {{ task.title }}

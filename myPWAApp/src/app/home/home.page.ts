@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { Device } from '@capacitor/device';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ import { CommonModule } from '@angular/common';
 export class HomePage {
   name: string = '';
   tasks: any[] = [];
+  deviceInfo: any = {};
 
   constructor(private http: HttpClient) {}
 
@@ -23,5 +25,9 @@ export class HomePage {
       .subscribe(data => {
         this.tasks = data;
       });
+  }
+
+  async getDeviceInfo() {
+    this.deviceInfo = await Device.getInfo();
   }
 }

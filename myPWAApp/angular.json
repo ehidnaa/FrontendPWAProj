@@ -129,7 +129,12 @@
     }
   },
   "cli": {
-    "schematicCollections": ["@ionic/angular-toolkit"]
+    "schematicCollections": [
+      "@ionic/angular-toolkit"
+    ],
+    "analytics": "fe5d4e5f-c546-4432-bf97-8785eca3109c",
+    "cache": {
+  "enabled": false
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
@@ -144,5 +149,6 @@
     "@angular-eslint/schematics:library": {
       "setParserOptionsProject": true
     }
+  }
   }
 }
